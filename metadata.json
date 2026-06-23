@@ -1,0 +1,6 @@
+{
+  "name": "Ad Engine",
+  "description": "An autonomous AI Branding Hub for startups and businesses to instantly generate professional posters, marketing banners, captions, scripts, and natural AI voice-overs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

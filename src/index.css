@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-pastel-pink: #FF2E93;
+  --color-pastel-lavender: #D946EF;
+  --color-pastel-blue: #3B82F6;
+  --color-pastel-mint: #10B981;
+  --color-pastel-cream: #FAF9F6;
+  --color-brand-purple: #8B5CF6;
+  
+  /* Artistic Flair Design tokens - Bold & Hyper Vibrate */
+  --color-artistic-pink: #FF1493;
+  --color-artistic-blue: #00E5FF;
+  --color-artistic-accent: #FFD700;
+  --color-artistic-bg: #070314;
+  --color-artistic-text: #FFFFFF;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15) translate(15px, -15px);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 16s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Organic blob shape */
+.logo-sphere-shape {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.artistic-gradient-bg {
+  background: radial-gradient(circle at 50% 50%, #150833 0%, #06020c 100%);
+}
+
+.artistic-glass {
+  background: rgba(13, 8, 28, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 20, 147, 0.45);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+.artistic-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+  transition: all 0.25s ease-in-out;
+}
+.artistic-input:focus {
+  border-color: var(--color-artistic-pink);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+  outline: none;
+}
+.artistic-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Custom styles for canvas elements and scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(13, 8, 28, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: #FF1493;
+  border-radius: 9999px;
+  border: 2px solid #06020c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF69B4;
+}
+
+/* Clear readable styling for text blocks */
+.text-extremely-clear {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
